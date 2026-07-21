@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SFTAS — Smart Foreign Trade Assistance System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="app-wrapper">
+
+  <!-- ═══════════════════════════════════════
+       SIDEBAR
+  ═══════════════════════════════════════ -->
+  <nav id="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-logo">
+        <div class="logo-icon">🌐</div>
+        <div>
+          <div>SFTAS</div>
+          <div class="brand-sub">Trade Intelligence</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-nav">
+      <div class="nav-section-label">Main</div>
+      <div class="nav-item active" data-page="dashboard">
+        <span class="nav-icon"><i class="bi bi-grid-1x2"></i></span>
+        Dashboard
+      </div>
+      <div class="nav-item" data-page="dtis">
+        <span class="nav-icon"><i class="bi bi-lightning-charge"></i></span>
+        Trade Intelligence
+        <span class="nav-badge green">LIVE</span>
+      </div>
+
+      <div class="nav-section-label">Trade Tools</div>
+      <div class="nav-item" data-page="product">
+        <span class="nav-icon"><i class="bi bi-box-seam"></i></span>
+        Product Input
+      </div>
+      <div class="nav-item" data-page="buyers">
+        <span class="nav-icon"><i class="bi bi-people"></i></span>
+        Buyers & Sellers
+      </div>
+      <div class="nav-item" data-page="shipment">
+        <span class="nav-icon"><i class="bi bi-truck"></i></span>
+        Shipment Tracking
+      </div>
+      <div class="nav-item" data-page="calculator">
+        <span class="nav-icon"><i class="bi bi-calculator"></i></span>
+        Cost Calculator
+      </div>
+
+      <div class="nav-section-label">Documents</div>
+      <div class="nav-item" data-page="documents">
+        <span class="nav-icon"><i class="bi bi-file-earmark-text"></i></span>
+        Documentation
+      </div>
+      <div class="nav-item" data-page="compliance">
+        <span class="nav-icon"><i class="bi bi-shield-check"></i></span>
+        Compliance Guide
+      </div>
+    </div>
+
+    <div class="sidebar-footer">
+      <div>Version <span class="version">2.0.0</span> · SFTAS</div>
+      <div style="margin-top:2px">Student Project · 2024</div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       MAIN CONTENT
+  ═══════════════════════════════════════ -->
+  <div id="main-content">
+
+    <!-- Header -->
+    <header id="top-header">
+      <div id="mobile-menu-btn" onclick="toggleSidebar()">
+        <i class="bi bi-list"></i>
+      </div>
+      <div class="header-page-title" id="page-title">
+        <span>Dashboard</span> Overview
+      </div>
+      <div class="header-pills">
+        <div class="header-pill">
+          <span class="dot"></span>
+          System Online
+        </div>
+        <div class="header-pill">
+          <i class="bi bi-clock" style="color:var(--accent)"></i>
+          <span id="live-time">--:--:--</span>
+        </div>
+        <div class="header-pill">
+          <i class="bi bi-currency-rupee" style="color:var(--gold)"></i>
+          INR Mode
+        </div>
+      </div>
+    </header>
+
+    <!-- ─────────────────────────────────────
+         PAGE: DASHBOARD
+    ───────────────────────────────────── -->
+    <div class="page active" id="page-dashboard">
+      <div class="section-title">Welcome to <span class="accent">SFTAS</span></div>
+      <div class="section-sub">Smart Foreign Trade Assistance System — Real-time Trade Intelligence Platform</div>
+
+      <!-- Stat Cards Row -->
+      <div class="row g-3 mb-4">
+        <div class="col-sm-6 col-xl-3">
+          <div class="stat-card">
+            <span class="card-trend trend-up">↑ 12%</span>
+            <div class="card-icon icon-blue"><i class="bi bi-arrow-left-right"></i></div>
+            <div class="card-value">48</div>
+            <div class="card-label">Active Trades</div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+          <div class="stat-card">
+            <span class="card-trend trend-down">3 New</span>
+            <div class="card-icon icon-red"><i class="bi bi-exclamation-triangle"></i></div>
+            <div class="card-value">7</div>
+            <div class="card-label">Risk Alerts</div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+          <div class="stat-card">
+            <span class="card-trend trend-up">↑ 8%</span>
+            <div class="card-icon icon-green"><i class="bi bi-lightbulb"></i></div>
+            <div class="card-value">23</div>
+            <div class="card-label">Recommendations</div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+          <div class="stat-card">
+            <span class="card-trend trend-up">₹ 2.4Cr</span>
+            <div class="card-icon icon-gold"><i class="bi bi-graph-up-arrow"></i></div>
+            <div class="card-value">₹18.7Cr</div>
+            <div class="card-label">Trade Volume</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <!-- Recent Activity -->
+        <div class="col-lg-7">
+          <div class="trade-card h-100">
+            <div class="card-header-line">
+              <div class="card-title"><span class="icon"><i class="bi bi-activity"></i></span> Recent Activity</div>
+              <span class="badge-custom badge-accent">Live Feed</span>
+            </div>
+            <div id="activity-feed"></div>
+          </div>
+        </div>
+        <!-- Quick Alerts -->
+        <div class="col-lg-5">
+          <div class="trade-card h-100">
+            <div class="card-header-line">
+              <div class="card-title"><span class="icon"><i class="bi bi-bell"></i></span> Alerts</div>
+              <span class="badge-custom badge-high">3 Critical</span>
+            </div>
+            <div id="dashboard-alerts"></div>
+            <hr class="divider">
+            <div class="card-title mb-3"><span class="icon"><i class="bi bi-geo-alt"></i></span> Trade Map</div>
+            <div id="map-container">
+              <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&q=India&zoom=3" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─────────────────────────────────────
+         PAGE: DTIS — DYNAMIC TRADE INTELLIGENCE
+    ───────────────────────────────────── -->
+    <div class="page" id="page-dtis">
+      <div class="dtis-banner">
+        <div class="dtis-title">⚡ Dynamic Trade Intelligence System (DTIS)</div>
+        <div class="dtis-desc">Real-time market insights, demand forecasting, currency analysis, and AI-powered export recommendations</div>
+      </div>
+
+      <div class="row g-3 mb-4">
+        <!-- News Section -->
+        <div class="col-lg-5">
+          <div class="trade-card h-100">
+            <div class="card-header-line">
+              <div class="card-title"><span class="icon">📰</span> Trade News</div>
+              <span class="badge-custom badge-accent">Live Updates</span>
+            </div>
+            <div id="news-feed"></div>
+          </div>
+        </div>
+        <!-- Demand Trend Chart -->
+        <div class="col-lg-7">
+          <div class="trade-card h-100">
+            <div class="card-header-line">
+              <div class="card-title"><span class="icon">📈</span> Demand Trend Graph</div>
+              <div>
+                <select class="form-select-custom" id="trend-product-select" style="width:auto;display:inline-block;padding:6px 12px;font-size:0.78rem;">
+                  <option value="Textiles">Textiles</option>
+                  <option value="Electronics">Electronics</option>
+                  <option value="Agriculture">Agriculture</option>
+                  <option value="Pharmaceuticals">Pharmaceuticals</option>
+                </select>
+              </div>
+            </div>
+            <div class="chart-wrap">
+              <canvas id="demandChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-3 mb-4">
+        <!-- Currency Converter -->
+        <div class="col-lg-4">
+          <div class="trade-card h-100">
+            <div class="card-header-line">
+              <div class="card-title"><span class="icon">💱</span> Currency Converter</div>
+            </div>
+            <label class="form-label-custom">Amount in INR</label>
+            <input type="number" id="inr-input" class="form-control-custom mb-3" value="100000" placeholder="Enter INR amount" />
+            <label class="form-label-custom">Convert To</label>
+            <select id="currency-select" class="form-select-custom mb-3">
+              <option value="USD" data-rate="0.012">USD — US Dollar</option>
+              <option value="AED" data-rate="0.044">AED — UAE Dirham</option>
+              <option value="EUR" data-rate="0.011">EUR — Euro</option>
+              <option value="GBP" data-rate="0.0095">GBP — British Pound</option>
+              <option value="JPY" data-rate="1.81">JPY — Japanese Yen</option>
+              <option value="SGD" data-rate="0.016">SGD — Singapore Dollar</option>
+              <option value="CNY" data-rate="0.087">CNY — Chinese Yuan</option>
+            </select>
+            <button class="btn-trade btn-trade-primary w-100" onclick="convertCurrency()">
+              <i class="bi bi-arrow-repeat"></i> Convert
+            </button>
+            <div class="converter-display mt-3">
+              <div class="converter-label">You get approximately</div>
+              <div class="converter-arrow">↓</div>
+              <div class="converter-amount" id="converted-result">1,200 USD</div>
+              <div class="converter-label" id="rate-info">Rate: 1 INR = 0.0120 USD</div>
+            </div>
+            <div class="impact-msg" id="currency-impact">
+              💡 Higher USD rate = Better export profit for Indian exporters
+            </div>
+          </div>
+        </div>
+
+        <!-- Smart Recommendation Engine -->
+        <div class="col-lg-8">
+          <div class="trade-card h-100">
+            <div class="card-header-line">
+              <div class="card-title"><span class="icon">🎯</span> Smart Recommendation Engine</div>
+              <span class="badge-custom badge-accent">Rule-Based AI</span>
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col-sm-6">
+                <label class="form-label-custom">Product Category</label>
+                <select id="rec-product" class="form-select-custom">
+                  <option value="">— Select Product —</option>
+                  <option value="Textiles">Textiles</option>
+                  <option value="Electronics">Electronics</option>
+                  <option value="Agriculture">Agriculture</option>
+                  <option value="Pharmaceuticals">Pharmaceuticals</option>
+                </select>
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label-custom">Target Country</label>
+                <select id="rec-country" class="form-select-custom">
+                  <option value="">— Select Country —</option>
+                  <option value="UAE">🇦🇪 UAE</option>
+                  <option value="USA">🇺🇸 USA</option>
+                  <option value="Germany">🇩🇪 Germany</option>
+                  <option value="UK">🇬🇧 UK</option>
+                  <option value="Japan">🇯🇵 Japan</option>
+                  <option value="Singapore">🇸🇬 Singapore</option>
+                  <option value="China">🇨🇳 China</option>
+                  <option value="Netherlands">🇳🇱 Netherlands</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn-trade btn-trade-primary mb-3" onclick="getRecommendation()">
+              <i class="bi bi-cpu"></i> Analyze & Recommend
+            </button>
+            <div id="rec-output"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Risk Alert System -->
+      <div class="trade-card">
+        <div class="card-header-line">
+          <div class="card-title"><span class="icon">⚠️</span> Risk Alert System</div>
+          <span class="badge-custom badge-high" id="risk-count-badge">Select a country</span>
+        </div>
+        <div id="risk-alerts-output">
+          <div class="text-muted-c" style="font-size:0.83rem;">Select a product and country above to see risk analysis.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─────────────────────────────────────
+         PAGE: PRODUCT INPUT
+    ───────────────────────────────────── -->
+    <div class="page" id="page-product">
+      <div class="section-title">📦 Product <span class="accent">Input</span></div>
+      <div class="section-sub">Configure your export product details to get tailored trade recommendations</div>
+
+      <div class="row g-3">
+        <div class="col-lg-6">
+          <div class="trade-card">
+            <div class="card-title mb-4"><span class="icon"><i class="bi bi-box-seam"></i></span> Product Configuration</div>
+
+            <div class="mb-3">
+              <label class="form-label-custom">Product Category *</label>
+              <select id="pi-category" class="form-select-custom" onchange="updateProductDetails()">
+                <option value="">— Select Category —</option>
+                <option value="Textiles">🧵 Textiles & Garments</option>
+                <option value="Electronics">⚡ Electronics & Hardware</option>
+                <option value="Agriculture">🌾 Agriculture & Food</option>
+                <option value="Pharmaceuticals">💊 Pharmaceuticals</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label-custom">Product Name</label>
+              <input type="text" id="pi-name" class="form-control-custom" placeholder="e.g. Cotton T-Shirts, LED Modules..." />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label-custom">Unit Price (INR) *</label>
+              <input type="number" id="pi-price" class="form-control-custom" placeholder="0" value="5000" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label-custom">Quantity (Units)</label>
+              <input type="number" id="pi-qty" class="form-control-custom" placeholder="0" value="1000" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label-custom">Target Country *</label>
+              <select id="pi-country" class="form-select-custom">
+                <option value="">— Select Country —</option>
+                <option value="UAE">🇦🇪 UAE</option>
+                <option value="USA">🇺🇸 USA</option>
+                <option value="Germany">🇩🇪 Germany</option>
+                <option value="UK">🇬🇧 UK</option>
+                <option value="Japan">🇯🇵 Japan</option>
+                <option value="Singapore">🇸🇬 Singapore</option>
+                <option value="China">🇨🇳 China</option>
+                <option value="Netherlands">🇳🇱 Netherlands</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label-custom">HS Code (Optional)</label>
+              <input type="text" id="pi-hs" class="form-control-custom" placeholder="e.g. 6205.20.00" />
+            </div>
+
+            <button class="btn-trade btn-trade-primary w-100" onclick="saveProduct()">
+              <i class="bi bi-check2-circle"></i> Save Product & Analyze
+            </button>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="trade-card mb-3">
+            <div class="card-title mb-3"><span class="icon"><i class="bi bi-info-circle"></i></span> Product Summary</div>
+            <div id="product-summary">
+              <div class="text-muted-c" style="font-size:0.83rem;">Fill in the form to see your product summary.</div>
+            </div>
+          </div>
+
+          <div class="trade-card">
+            <div class="card-title mb-3"><span class="icon"><i class="bi bi-geo-alt"></i></span> Country Map Preview</div>
+            <div id="product-map-container" style="border-radius:10px;overflow:hidden;border:1px solid var(--border);height:220px;">
+              <iframe id="product-map" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&q=World&zoom=1" allowfullscreen loading="lazy" style="width:100%;height:100%;border:none;"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─────────────────────────────────────
+         PAGE: BUYERS & SELLERS
+    ───────────────────────────────────── -->
+    <div class="page" id="page-buyers">
+      <div class="section-title">🤝 Buyers & <span class="accent">Sellers</span></div>
+      <div class="section-sub">Browse and filter verified international buyers and domestic sellers</div>
+
+      <!-- Filters -->
+      <div class="trade-card mb-4">
+        <div class="row g-3">
+          <div class="col-sm-4">
+            <label class="form-label-custom">Filter by Product</label>
+            <select id="filter-product" class="form-select-custom" onchange="filterEntities()">
+              <option value="all">All Products</option>
+              <option value="Textiles">Textiles</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Agriculture">Agriculture</option>
+              <option value="Pharmaceuticals">Pharmaceuticals</option>
+            </select>
+          </div>
+          <div class="col-sm-4">
+            <label class="form-label-custom">Filter by Country</label>
+            <select id="filter-country" class="form-select-custom" onchange="filterEntities()">
+              <option value="all">All Countries</option>
+              <option value="UAE">UAE</option>
+              <option value="USA">USA</option>
+              <option value="Germany">Germany</option>
+              <option value="UK">UK</option>
+              <option value="Japan">Japan</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Netherlands">Netherlands</option>
+            </select>
+          </div>
+          <div class="col-sm-4">
+            <label class="form-label-custom">View Mode</label>
+            <select id="filter-type" class="form-select-custom" onchange="filterEntities()">
+              <option value="buyers">International Buyers</option>
+              <option value="sellers">Domestic Sellers</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="trade-card">
+        <div class="card-header-line mb-3">
+          <div class="card-title"><span class="icon"><i class="bi bi-table"></i></span> Results</div>
+          <span class="badge-custom badge-accent" id="entity-count">— records</span>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="entity-table" id="entity-table">
+            <thead id="entity-thead"></thead>
+            <tbody id="entity-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─────────────────────────────────────
+         PAGE: SHIPMENT TRACKING
+    ───────────────────────────────────── -->
+    <div class="page" id="page-shipment">
+      <div class="section-title">🚚 Shipment <span class="accent">Tracking</span></div>
+      <div class="section-sub">Track your export shipment status in real-time across all logistics stages</div>
+
+      <div class="row g-3">
+        <div class="col-lg-8">
+          <div class="trade-card mb-3">
+            <div class="card-header-line">
+              <div class="card-title"><span class="icon"><i class="bi bi-search"></i></span> Lookup Shipment</div>
+            </div>
+            <div class="row g-3">
+              <div class="col-sm-8">
+                <label class="form-label-custom">Tracking Number / AWB</label>
+                <input type="text" id="track-id" class="form-control-custom" placeholder="e.g. SFTAS-2024-001842" />
+              </div>
+              <div class="col-sm-4 d-flex align-items-end">
+                <button class="btn-trade btn-trade-primary w-100" onclick="trackShipment()">
+                  <i class="bi bi-search"></i> Track
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="trade-card" id="track-result" style="display:none;">
+            <div class="card-header-line mb-0">
+              <div class="card-title"><span class="icon">🚢</span> <span id="track-awb"></span></div>
+              <span class="badge-custom" id="track-status-badge"></span>
+            </div>
+            <div class="row g-3 my-2" id="track-meta"></div>
+            <hr class="divider">
+            <div class="card-title mb-3"><span class="icon"><i class="bi bi-signpost-split"></i></span> Shipment Progress</div>
+            <div class="progress-track" id="progress-track"></div>
+            <hr class="divider">
+            <div class="card-title mb-3"><span class="icon"><i class="bi bi-list-ul"></i></span> Activity Log</div>
+            <div id="activity-log"></div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="trade-card mb-3">
+            <div class="card-title mb-3"><span class="icon"><i class="bi bi-archive"></i></span> Sample Shipments</div>
+            <div id="sample-shipments"></div>
+          </div>
+          <div class="trade-card">
+            <div class="card-title mb-3"><span class="icon"><i class="bi bi-bar-chart"></i></span> Transit Stats</div>
+            <div class="chart-wrap" style="height:180px;">
+              <canvas id="transitChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─────────────────────────────────────
+         PAGE: COST CALCULATOR
+    ───────────────────────────────────── -->
+    <div class="page" id="page-calculator">
+      <div class="section-title">📊 Cost & Profit <span class="accent">Calculator</span></div>
+      <div class="section-sub">Calculate total export costs, duties, and profit margins for your trade</div>
+
+      <div class="row g-3">
+        <div class="col-lg-5">
+          <div class="trade-card">
+            <div class="card-title mb-4"><span class="icon"><i class="bi bi-input-cursor"></i></span> Input Parameters</div>
+
+            <div class="mb-3">
+              <label class="form-label-custom">Product Price (INR per unit)</label>
+              <input type="number" id="calc-price" class="form-control-custom" value="5000" oninput="calculateProfit()" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label-custom">Quantity (Units)</label>
+              <input type="number" id="calc-qty" class="form-control-custom" value="1000" oninput="calculateProfit()" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label-custom">Shipping Cost (INR)</label>
+              <input type="number" id="calc-ship" class="form-control-custom" value="80000" oninput="calculateProfit()" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label-custom">Customs / Duty (%)</label>
+              <input type="number" id="calc-duty" class="form-control-custom" value="5" oninput="calculateProfit()" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label-custom">Packaging Cost (INR)</label>
+              <input type="number" id="calc-pack" class="form-control-custom" value="20000" oninput="calculateProfit()" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label-custom">Insurance (%)</label>
+              <input type="number" id="calc-insure" class="form-control-custom" value="1.5" step="0.1" oninput="calculateProfit()" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label-custom">Selling Price (INR per unit)</label>
+              <input type="number" id="calc-sell" class="form-control-custom" value="7500" oninput="calculateProfit()" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="trade-card mb-3">
+            <div class="card-title mb-4"><span class="icon"><i class="bi bi-receipt"></i></span> Cost Breakdown</div>
+            <div id="cost-breakdown"></div>
+          </div>
+          <div class="trade-card">
+            <div class="card-title mb-3"><span class="icon"><i class="bi bi-pie-chart"></i></span> Profit Visualization</div>
+            <div class="chart-wrap" style="height:220px;">
+              <canvas id="profitChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─────────────────────────────────────
+         PAGE: DOCUMENTATION
+    ───────────────────────────────────── -->
+    <div class="page" id="page-documents">
+      <div class="section-title">📄 Documentation <span class="accent">Generator</span></div>
+      <div class="section-sub">Generate professional export invoices and trade documents</div>
+
+      <div class="row g-3">
+        <div class="col-lg-5">
+          <div class="trade-card">
+            <div class="card-title mb-4"><span class="icon"><i class="bi bi-pencil-square"></i></span> Invoice Details</div>
+
+            <div class="mb-3">
+              <label class="form-label-custom">Exporter Name</label>
+              <input type="text" id="inv-exporter" class="form-control-custom" value="Rajasthan Fabrics Pvt Ltd" oninput="previewInvoice()" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label-custom">Exporter Address</label>
+              <input type="text" id="inv-exp-addr" class="form-control-custom" value="Jaipur Industrial Area, Rajasthan, India" oninput="previewInvoice()" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label-custom">Buyer Name</label>
+              <input type="text" id="inv-buyer" class="form-control-custom" value="Al Fardan Trading LLC" oninput="previewInvoice()" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label-custom">Buyer Country</label>
+              <input type="text" id="inv-buy-country" class="form-control-custom" value="Dubai, UAE" oninput="previewInvoice()" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label-custom">Product Description</label>
+              <input type="text" id="inv-product" class="form-control-custom" value="Cotton T-Shirts (100% Premium Cotton)" oninput="previewInvoice()" />
+            </div>
+            <div class="row g-2 mb-3">
+              <div class="col-6">
+                <label class="form-label-custom">Quantity</label>
+                <input type="number" id="inv-qty" class="form-control-custom" value="500" oninput="previewInvoice()" />
+              </div>
+              <div class="col-6">
+                <label class="form-label-custom">Unit Price (USD)</label>
+                <input type="number" id="inv-uprice" class="form-control-custom" value="12.50" step="0.01" oninput="previewInvoice()" />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label-custom">Shipping Terms</label>
+              <select id="inv-terms" class="form-select-custom" onchange="previewInvoice()">
+                <option value="FOB">FOB — Free on Board</option>
+                <option value="CIF">CIF — Cost, Insurance & Freight</option>
+                <option value="EXW">EXW — Ex Works</option>
+                <option value="DDP">DDP — Delivered Duty Paid</option>
+              </select>
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn-trade btn-trade-primary flex-1" onclick="previewInvoice()" style="flex:1">
+                <i class="bi bi-eye"></i> Preview
+              </button>
+              <button class="btn-trade btn-trade-success" onclick="downloadInvoicePDF()">
+                <i class="bi bi-download"></i> Download PDF
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="trade-card">
+            <div class="card-header-line mb-3">
+              <div class="card-title"><span class="icon"><i class="bi bi-file-earmark-text"></i></span> Invoice Preview</div>
+              <span class="badge-custom badge-success" style="background:rgba(16,185,129,0.15);color:var(--success);border:1px solid rgba(16,185,129,0.3);">Live Preview</span>
+            </div>
+            <div id="invoice-preview"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─────────────────────────────────────
+         PAGE: COMPLIANCE GUIDE
+    ───────────────────────────────────── -->
+    <div class="page" id="page-compliance">
+      <div class="section-title">🌍 Compliance <span class="accent">Guide</span></div>
+      <div class="section-sub">Country-wise trade regulations, tariffs, and compliance requirements</div>
+
+      <div class="row g-3 mb-4" id="compliance-cards"></div>
+
+      <div class="trade-card" id="compliance-detail" style="display:none;">
+        <div class="card-header-line mb-3">
+          <div class="card-title" id="compliance-detail-title"></div>
+          <button class="btn-trade btn-trade-secondary" onclick="closeComplianceDetail()" style="padding:6px 12px;font-size:0.78rem;">
+            <i class="bi bi-x-lg"></i> Close
+          </button>
+        </div>
+        <div id="compliance-detail-body"></div>
+      </div>
+    </div>
+
+  </div><!-- end main-content -->
+</div><!-- end app-wrapper -->
+
+<!-- Toast Container -->
+<div id="toast-container"></div>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

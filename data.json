@@ -1,0 +1,207 @@
+{
+  "buyers": [
+    { "id": 1, "name": "Al Fardan Trading LLC", "country": "UAE", "product": "Textiles", "budget": 50000, "contact": "alfardan@trade.ae", "rating": 4.8 },
+    { "id": 2, "name": "Dubai Garments Co.", "country": "UAE", "product": "Textiles", "budget": 75000, "contact": "info@dubaigarments.ae", "rating": 4.5 },
+    { "id": 3, "name": "Tech Galaxy GmbH", "country": "Germany", "product": "Electronics", "budget": 120000, "contact": "buy@techgalaxy.de", "rating": 4.9 },
+    { "id": 4, "name": "Euro Electronics BV", "country": "Netherlands", "product": "Electronics", "budget": 95000, "contact": "orders@euroelec.nl", "rating": 4.6 },
+    { "id": 5, "name": "US Agri Imports Inc.", "country": "USA", "product": "Agriculture", "budget": 60000, "contact": "imports@usagri.com", "rating": 4.3 },
+    { "id": 6, "name": "Nature's Best LLC", "country": "USA", "product": "Agriculture", "budget": 45000, "contact": "buy@naturesbest.com", "rating": 4.1 },
+    { "id": 7, "name": "Medi-Supply UK Ltd", "country": "UK", "product": "Pharmaceuticals", "budget": 200000, "contact": "purchase@medisupply.co.uk", "rating": 4.7 },
+    { "id": 8, "name": "Health Bridge Co.", "country": "UK", "product": "Pharmaceuticals", "budget": 180000, "contact": "orders@healthbridge.uk", "rating": 4.4 },
+    { "id": 9, "name": "Japan Tech Traders", "country": "Japan", "product": "Electronics", "budget": 150000, "contact": "trade@japantech.jp", "rating": 4.9 },
+    { "id": 10, "name": "Singapore Textile Hub", "country": "Singapore", "product": "Textiles", "budget": 85000, "contact": "hub@sgtextile.sg", "rating": 4.6 }
+  ],
+  "sellers": [
+    { "id": 1, "name": "Rajasthan Fabrics Pvt Ltd", "country": "India", "product": "Textiles", "minOrder": 5000, "contact": "rajfab@india.com", "rating": 4.7 },
+    { "id": 2, "name": "Coimbatore Textile Mills", "country": "India", "product": "Textiles", "minOrder": 10000, "contact": "ctm@india.com", "rating": 4.5 },
+    { "id": 3, "name": "Hyderabad Electronics Hub", "country": "India", "product": "Electronics", "minOrder": 20000, "contact": "heh@india.com", "rating": 4.6 },
+    { "id": 4, "name": "Pune AgriExport Co.", "country": "India", "product": "Agriculture", "minOrder": 8000, "contact": "pune.agri@india.com", "rating": 4.3 },
+    { "id": 5, "name": "Mumbai Pharma Exports", "country": "India", "product": "Pharmaceuticals", "minOrder": 50000, "contact": "mumbai.pharma@india.com", "rating": 4.8 }
+  ],
+  "countries": [
+    {
+      "name": "UAE",
+      "flag": "🇦🇪",
+      "risk": "Low",
+      "tariff": "5%",
+      "currency": "AED",
+      "rules": ["GST certificate required", "Halal certification for food", "Arabic labeling mandatory", "No alcohol-related products"],
+      "profitPotential": "High",
+      "demandScore": 92,
+      "mapQuery": "United+Arab+Emirates",
+      "notes": "UAE is one of India's top trading partners. Strong demand for textiles, jewelry, and electronics."
+    },
+    {
+      "name": "USA",
+      "flag": "🇺🇸",
+      "risk": "Medium",
+      "tariff": "7.5%",
+      "currency": "USD",
+      "rules": ["FDA approval for food & pharma", "FCC certification for electronics", "CPSC compliance required", "Anti-dumping duties may apply"],
+      "profitPotential": "High",
+      "demandScore": 88,
+      "mapQuery": "United+States",
+      "notes": "Large market with high purchasing power. Regulatory compliance is strict but profitable."
+    },
+    {
+      "name": "Germany",
+      "flag": "🇩🇪",
+      "risk": "Low",
+      "tariff": "3.5%",
+      "currency": "EUR",
+      "rules": ["CE marking required", "REACH compliance for chemicals", "DIN standards apply", "Strict environmental regulations"],
+      "profitPotential": "High",
+      "demandScore": 85,
+      "mapQuery": "Germany",
+      "notes": "Germany values quality. Meeting EU standards opens doors to all 27 EU member states."
+    },
+    {
+      "name": "UK",
+      "flag": "🇬🇧",
+      "risk": "Low",
+      "tariff": "4%",
+      "currency": "GBP",
+      "rules": ["UKCA marking post-Brexit", "NHS approval for pharmaceuticals", "Trading Standards compliance", "Import VAT applies"],
+      "profitPotential": "Medium",
+      "demandScore": 80,
+      "mapQuery": "United+Kingdom",
+      "notes": "Post-Brexit regulations are evolving. UK-India FTA negotiations ongoing."
+    },
+    {
+      "name": "China",
+      "flag": "🇨🇳",
+      "risk": "High",
+      "tariff": "12%",
+      "currency": "CNY",
+      "rules": ["CCC certification mandatory", "Strict customs inspections", "Local partner often required", "IP protection concerns"],
+      "profitPotential": "Low",
+      "demandScore": 55,
+      "mapQuery": "China",
+      "notes": "High competition from local manufacturers. Trade tensions can affect tariffs."
+    },
+    {
+      "name": "Japan",
+      "flag": "🇯🇵",
+      "risk": "Low",
+      "tariff": "2.5%",
+      "currency": "JPY",
+      "rules": ["JIS standards compliance", "PSE mark for electronics", "Strict food safety laws", "Detailed labeling in Japanese"],
+      "profitPotential": "High",
+      "demandScore": 87,
+      "mapQuery": "Japan",
+      "notes": "Japan-India CEPA provides preferential tariffs. High quality expectations."
+    },
+    {
+      "name": "Singapore",
+      "flag": "🇸🇬",
+      "risk": "Low",
+      "tariff": "0%",
+      "currency": "SGD",
+      "rules": ["Free port — minimal restrictions", "ASEAN trade gateway", "GST registration for large volumes", "Standard international documentation"],
+      "profitPotential": "High",
+      "demandScore": 90,
+      "mapQuery": "Singapore",
+      "notes": "0% tariff under CECA. Excellent re-export hub for Southeast Asia."
+    },
+    {
+      "name": "Netherlands",
+      "flag": "🇳🇱",
+      "risk": "Low",
+      "tariff": "3.5%",
+      "currency": "EUR",
+      "rules": ["EU standards apply", "Rotterdam port clearance", "GDPR for digital goods", "Environmental packaging rules"],
+      "profitPotential": "Medium",
+      "demandScore": 78,
+      "mapQuery": "Netherlands",
+      "notes": "Major European logistics hub through Rotterdam. Gateway to EU markets."
+    }
+  ],
+  "news": [
+    {
+      "title": "India-UAE CEPA Boosts Textile Exports by 34%",
+      "summary": "The Comprehensive Economic Partnership Agreement between India and UAE has resulted in a 34% surge in textile exports, with bilateral trade crossing $85 billion in FY2024.",
+      "date": "2024-03-15",
+      "category": "Policy",
+      "icon": "📜"
+    },
+    {
+      "title": "Global Electronics Demand to Hit $4.2 Trillion in 2025",
+      "summary": "Market analysts predict unprecedented growth in consumer electronics, with India emerging as a key exporter of semiconductor components and mobile accessories.",
+      "date": "2024-03-10",
+      "category": "Market",
+      "icon": "📈"
+    },
+    {
+      "title": "New Shipping Route Cuts India-Europe Transit by 6 Days",
+      "summary": "A new maritime corridor via the Suez Canal optimization has reduced shipping time between Indian ports and European destinations significantly.",
+      "date": "2024-03-08",
+      "category": "Logistics",
+      "icon": "🚢"
+    },
+    {
+      "title": "RBI Eases Foreign Exchange Rules for Small Exporters",
+      "summary": "The Reserve Bank of India has simplified forex regulations for SME exporters, reducing documentation burden and enabling faster realization of export proceeds.",
+      "date": "2024-03-05",
+      "category": "Finance",
+      "icon": "💰"
+    },
+    {
+      "title": "India's Pharma Exports Cross $28 Billion — Record High",
+      "summary": "India's pharmaceutical sector achieved a historic milestone with exports crossing $28 billion, driven by generic drug demand in the USA, UK, and African markets.",
+      "date": "2024-03-01",
+      "category": "Pharma",
+      "icon": "💊"
+    }
+  ],
+  "demandTrends": {
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    "datasets": {
+      "Textiles": [65, 70, 68, 80, 85, 90, 88, 92, 87, 95, 98, 100],
+      "Electronics": [80, 82, 85, 88, 90, 87, 92, 95, 98, 100, 102, 108],
+      "Agriculture": [50, 55, 70, 75, 65, 60, 58, 62, 70, 72, 68, 65],
+      "Pharmaceuticals": [90, 92, 95, 93, 96, 98, 100, 102, 105, 108, 110, 115]
+    }
+  },
+  "recommendations": {
+    "Textiles": {
+      "UAE": { "demand": "Very High", "risk": "Low", "profit": "High", "tip": "Focus on premium cotton and silk products. Ramadan season (Q1) sees 40% spike in demand." },
+      "USA": { "demand": "High", "risk": "Medium", "profit": "High", "tip": "Sustainable and organic textiles command 30% premium. Get OEKO-TEX certification." },
+      "Germany": { "demand": "High", "risk": "Low", "profit": "High", "tip": "Technical textiles and workwear have growing demand. DIN compliance is key." },
+      "Japan": { "demand": "High", "risk": "Low", "profit": "High", "tip": "Japanese buyers value craftsmanship. Traditional Indian weaves fetch premium prices." },
+      "Singapore": { "demand": "High", "risk": "Low", "profit": "High", "tip": "Zero tariff under CECA. Use as hub for ASEAN distribution." },
+      "China": { "demand": "Low", "risk": "High", "profit": "Low", "tip": "Local production dominates. Consider niche luxury segment only." },
+      "UK": { "demand": "Medium", "risk": "Low", "profit": "Medium", "tip": "Post-Brexit UK-India FTA being negotiated. Good for ethnic fashion." },
+      "Netherlands": { "demand": "Medium", "risk": "Low", "profit": "Medium", "tip": "Rotterdam hub enables EU-wide distribution. Eco-labeling required." }
+    },
+    "Electronics": {
+      "UAE": { "demand": "High", "risk": "Low", "profit": "High", "tip": "Dubai re-exports electronics to MENA region. B2B opportunities are large." },
+      "USA": { "demand": "Very High", "risk": "Medium", "profit": "High", "tip": "FCC certification required. Mobile accessories and IoT devices have high margins." },
+      "Germany": { "demand": "High", "risk": "Low", "profit": "High", "tip": "Industrial electronics and automation components in strong demand." },
+      "Japan": { "demand": "High", "risk": "Low", "profit": "High", "tip": "Partner with Japanese firms for technology transfer and co-branding." },
+      "Singapore": { "demand": "High", "risk": "Low", "profit": "High", "tip": "Tech hub of Asia. Excellent for B2B electronics trade and re-export." },
+      "China": { "demand": "Low", "risk": "High", "profit": "Low", "tip": "Highly competitive market. Not recommended for entry-level exporters." },
+      "UK": { "demand": "High", "risk": "Low", "profit": "Medium", "tip": "UKCA replacing CE mark. Strong demand for smart home devices." },
+      "Netherlands": { "demand": "Medium", "risk": "Low", "profit": "Medium", "tip": "EU gateway. Good for B2B electronics distribution." }
+    },
+    "Agriculture": {
+      "UAE": { "demand": "High", "risk": "Low", "profit": "High", "tip": "UAE imports 90% of food. Spices, rice, and fresh produce have consistent demand." },
+      "USA": { "demand": "High", "risk": "Medium", "profit": "High", "tip": "Organic produce commands premium. FDA approval is mandatory for processed foods." },
+      "Germany": { "demand": "Medium", "risk": "Low", "profit": "Medium", "tip": "Spices and organic products popular. HACCP certification required." },
+      "Japan": { "demand": "Medium", "risk": "Low", "profit": "Medium", "tip": "Quality-conscious market. Basmati rice and spices have loyal buyers." },
+      "Singapore": { "demand": "High", "risk": "Low", "profit": "High", "tip": "Food hub of ASEAN. Zero tariff and strong Indian diaspora demand." },
+      "China": { "demand": "Medium", "risk": "High", "profit": "Low", "tip": "Political tensions affect agri-trade. Regulatory barriers are significant." },
+      "UK": { "demand": "Medium", "risk": "Low", "profit": "Medium", "tip": "Large Indian diaspora drives ethnic food demand. Good long-term market." },
+      "Netherlands": { "demand": "Medium", "risk": "Low", "profit": "Medium", "tip": "Major agri-trading hub. Good for bulk commodity trade." }
+    },
+    "Pharmaceuticals": {
+      "UAE": { "demand": "High", "risk": "Low", "profit": "High", "tip": "UAE is a pharmaceutical re-export hub. MOH registration required." },
+      "USA": { "demand": "Very High", "risk": "Medium", "profit": "Very High", "tip": "Largest pharma market. FDA ANDA approval is worth the investment. Generics dominate." },
+      "Germany": { "demand": "High", "risk": "Low", "profit": "High", "tip": "EU GMP certification opens 27-country market. Strong demand for generics." },
+      "Japan": { "demand": "Medium", "risk": "Low", "profit": "High", "tip": "PMDA approval required. Long approval process but very profitable once approved." },
+      "Singapore": { "demand": "High", "risk": "Low", "profit": "High", "tip": "HSA approval enables ASEAN distribution. Fast regulatory pathway." },
+      "China": { "demand": "Medium", "risk": "High", "profit": "Low", "tip": "NMPA regulations are complex. IP theft risk is a concern." },
+      "UK": { "demand": "High", "risk": "Low", "profit": "High", "tip": "NHS tendering is lucrative. MHRA approval pathway available post-Brexit." },
+      "Netherlands": { "demand": "Medium", "risk": "Low", "profit": "Medium", "tip": "EMA headquarters in Amsterdam. Good EU pharma regulatory hub." }
+    }
+  }
+}
