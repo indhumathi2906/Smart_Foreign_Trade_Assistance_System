@@ -4,7 +4,7 @@ A frontend-only web application that simulates a real-world foreign trade intell
 
 
 
-## 🎯 What Is This Project?
+ What Is This Project?
 
 SFTAS is a trade management dashboard designed for Indian exporters and importers. It helps users analyze international markets, find buyers and sellers, track shipments, calculate profits, generate export invoices, and understand country-wise compliance rules all from a single browser window.
 
@@ -16,12 +16,12 @@ The project was built to demonstrate how a fully functional, data-driven busines
  Dashboard
 The landing page gives a quick snapshot of the trade environment active trades, risk alerts, recommendations, and trade volume. A live activity feed shows recent events like order confirmations, shipment clearances, and currency updates. Critical alerts are displayed at a glance alongside an embedded world map.
 
-### ⚡ Dynamic Trade Intelligence System (DTIS)
+Dynamic Trade Intelligence System (DTIS)
 The highlight of the project. A dedicated intelligence hub with four components working together:
 
-- **Trade News Feed** — Five curated trade news items covering policy changes, market trends, logistics updates, and finance news relevant to Indian exporters.
-- **Demand Trend Graph** — An interactive Chart.js line graph showing month-by-month demand index for Textiles, Electronics, Agriculture, and Pharmaceuticals. The chart updates instantly when you switch products.
-- **Currency Converter** — Converts INR to seven major currencies (USD, AED, EUR, GBP, JPY, SGD, CNY) using static exchange rates. Displays a contextual impact message explaining what the rate means for export profitability.
+Trade News Feed — Five curated trade news items covering policy changes, market trends, logistics updates, and finance news relevant to Indian exporters.
+Demand Trend Graph — An interactive Chart.js line graph showing month-by-month demand index for Textiles, Electronics, Agriculture, and Pharmaceuticals. The chart updates instantly when you switch products.
+Currency Converter — Converts INR to seven major currencies (USD, AED, EUR, GBP, JPY, SGD, CNY) using static exchange rates. Displays a contextual impact message explaining what the rate means for export profitability.
 - **Smart Recommendation Engine** — A rule-based logic system covering 32 product-country combinations. Select a product category and a target country, and the engine returns demand level, risk classification, profit potential, tariff rate, a scored demand bar, and an expert tip specific to that combination.
 
 ### ⚠️ Risk Alert System
