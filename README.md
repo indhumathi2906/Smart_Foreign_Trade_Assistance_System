@@ -1,4 +1,4 @@
-# 🌐 Smart Foreign Trade Assistance System (SFTAS) 121212
+# 🌐 Smart Foreign Trade Assistance System (SFTAS) 1212
 212
 A frontend-only web application that simulates a real-world foreign trade intelligence platform — built entirely with HTML, CSS, and Vanilla JavaScript. No backend. No frameworks. Just open `index.html` and it runs.
 
