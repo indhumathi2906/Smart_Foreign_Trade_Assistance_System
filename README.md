@@ -15,7 +15,7 @@ The project was built to demonstrate how a fully functional, data-driven busines
 ## ✨ Features
 
 ### 🏠 Dashboard
-The landing page gives a quick snapshot of the trade environment — active trades, risk alerts, recommendations, and trade volume. A live activity feed shows recent events like order confirmations, shipment clearances, and currency updates. Critical alerts are displayed at a glance alongside an embedded world map.
+The landing page gives a quick snapshot of the trade environment active trades, risk alerts, recommendations, and trade volume. A live activity feed shows recent events like order confirmations, shipment clearances, and currency updates. Critical alerts are displayed at a glance alongside an embedded world map.
 
 ### ⚡ Dynamic Trade Intelligence System (DTIS)
 The highlight of the project. A dedicated intelligence hub with four components working together:
