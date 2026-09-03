@@ -11,10 +11,9 @@ SFTAS is a trade management dashboard designed for Indian exporters and importer
 The project was built to demonstrate how a fully functional, data-driven business tool can be built purely on the frontend without relying on any server or database.
 
 
+ Features
 
-## ✨ Features
-
-### 🏠 Dashboard
+ Dashboard
 The landing page gives a quick snapshot of the trade environment active trades, risk alerts, recommendations, and trade volume. A live activity feed shows recent events like order confirmations, shipment clearances, and currency updates. Critical alerts are displayed at a glance alongside an embedded world map.
 
 ### ⚡ Dynamic Trade Intelligence System (DTIS)
