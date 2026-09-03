@@ -2,15 +2,15 @@
 
 A frontend-only web application that simulates a real-world foreign trade intelligence platform — built entirely with HTML, CSS, and Vanilla JavaScript. No backend. No frameworks. Just open `index.html` and it runs.
 
----
+
 
 ## 🎯 What Is This Project?
 
-SFTAS is a trade management dashboard designed for Indian exporters and importers. It helps users analyze international markets, find buyers and sellers, track shipments, calculate profits, generate export invoices, and understand country-wise compliance rules — all from a single browser window.
+SFTAS is a trade management dashboard designed for Indian exporters and importers. It helps users analyze international markets, find buyers and sellers, track shipments, calculate profits, generate export invoices, and understand country-wise compliance rules all from a single browser window.
 
 The project was built to demonstrate how a fully functional, data-driven business tool can be built purely on the frontend without relying on any server or database.
 
----
+
 
 ## ✨ Features
 
